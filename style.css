@@ -48,12 +48,12 @@ nav a:hover { background-color: rgb(243, 13, 13); color: #1e1f1e; padding: 5px; 
 #projects{width: 90%; margin: auto;}
 #projects h2{text-align: center; font-size: 30px; font-weight: bold; padding: 20px;}
 .projects{display: flex; align-items: center; justify-content: center; gap: 30px;}
-.project-card { width: calc(50% - 30px/2); background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); } 
+.project-card { width: calc(50% - 30px/2); background: #dee1e4;; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); } 
 .project-card a { display: inline-block; margin-top: 0.5rem; color: #0077cc; }
 .project-card h3{font-weight: bold}
 
 #about{display: flex; justify-content: space-between; align-items: center; gap: 20px;  width: 90%; margin: auto; }
-#aboutImg img{border-radius: 10%; max-height: 350px; text-align: center;}
+#aboutImg img{border-radius: 10%;  text-align: center; }
 b{font-weight: bold;}
 #aboutText h2{font-size: 30px; font-weight: bold; padding: 10px;}
 #aboutText p{font-size: 20px;}
@@ -67,7 +67,7 @@ b{font-weight: bold;}
 .skills-section { padding: 60px 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; } 
 .skills-container {text-align: center; gap: 20px;} 
 .section-title { font-size: 2.5rem; color: #1e293b; margin-bottom: 40px; } 
-.skills-category { background: #ededf1;; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); padding: 20px 25px; margin-bottom: 25px; text-align: left; transition: transform 0.3s ease; width: calc(33.33% - 2*20px/3); } 
+.skills-category { background: #dee1e4; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); padding: 20px 25px; margin-bottom: 25px; text-align: left; transition: transform 0.3s ease; width: calc(33.33% - 2*20px/3); } 
 .skills-category:hover { transform: translateY(-5px); } 
 .skills-category h3 { font-size: 1.3rem; color: #0ea5e9; margin-bottom: 10px; } 
 .skills-category p { font-size: 1rem; color: #334155; margin: 0; }
@@ -114,9 +114,12 @@ footer {
 
 /* Responsive */
 @media only screen and (max-width: 767px){
-  .projects, #educationCards, .skills-container, #about, #banner, .container {flex-direction: column;}
+  .projects, #educationCards, .skills-container, #banner, .container {flex-direction: column;}
+  #about{flex-direction: column-reverse;}
+  #aboutText h2{text-align: center;}
   #banner{margin-top: 50px;}
-  #bannerImg img{ max-height: 350px; width: 100%;} 
+  #aboutImg img, #bannerImg img{ border-radius: 50%; max-height: 400px; margin-top: 20px;} 
+  #bannerImg img{max-height: 400px; margin-top: 20px; }
   .project-card, .aboutMe{width: 100%;}
   .education-item, .skills-category{width: 90%;}
 
